@@ -11,6 +11,10 @@
 		2993934C29B3F1CD002FF201 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2993934B29B3F1CD002FF201 /* ContentView.swift */; };
 		2993934E29B3F1CE002FF201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2993934D29B3F1CE002FF201 /* Assets.xcassets */; };
 		2993935229B3F1CE002FF201 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2993935129B3F1CE002FF201 /* Preview Assets.xcassets */; };
+		2993935929B3F1EF002FF201 /* SolarFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2993935829B3F1EF002FF201 /* SolarFeed.swift */; };
+		2993935B29B3F204002FF201 /* MyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2993935A29B3F204002FF201 /* MyProfile.swift */; };
+		2993935D29B3F21D002FF201 /* SinglePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2993935C29B3F21D002FF201 /* SinglePost.swift */; };
+		2993935F29B3F229002FF201 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2993935E29B3F229002FF201 /* LikeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		2993934D29B3F1CE002FF201 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2993934F29B3F1CE002FF201 /* SolarGram2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SolarGram2.entitlements; sourceTree = "<group>"; };
 		2993935129B3F1CE002FF201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2993935829B3F1EF002FF201 /* SolarFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarFeed.swift; sourceTree = "<group>"; };
+		2993935A29B3F204002FF201 /* MyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
+		2993935C29B3F21D002FF201 /* SinglePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePost.swift; sourceTree = "<group>"; };
+		2993935E29B3F229002FF201 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				2993934929B3F1CD002FF201 /* SolarGram2App.swift */,
-				2993934B29B3F1CD002FF201 /* ContentView.swift */,
+				2993936129B3F24A002FF201 /* Views */,
+				2993936029B3F23C002FF201 /* Components */,
 				2993934D29B3F1CE002FF201 /* Assets.xcassets */,
 				2993934F29B3F1CE002FF201 /* SolarGram2.entitlements */,
 				2993935029B3F1CE002FF201 /* Preview Content */,
@@ -67,6 +76,25 @@
 				2993935129B3F1CE002FF201 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2993936029B3F23C002FF201 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2993935C29B3F21D002FF201 /* SinglePost.swift */,
+				2993935E29B3F229002FF201 /* LikeButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2993936129B3F24A002FF201 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2993934B29B3F1CD002FF201 /* ContentView.swift */,
+				2993935829B3F1EF002FF201 /* SolarFeed.swift */,
+				2993935A29B3F204002FF201 /* MyProfile.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2993934C29B3F1CD002FF201 /* ContentView.swift in Sources */,
+				2993935B29B3F204002FF201 /* MyProfile.swift in Sources */,
+				2993935929B3F1EF002FF201 /* SolarFeed.swift in Sources */,
 				2993934A29B3F1CD002FF201 /* SolarGram2App.swift in Sources */,
+				2993935F29B3F229002FF201 /* LikeButton.swift in Sources */,
+				2993935D29B3F21D002FF201 /* SinglePost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
