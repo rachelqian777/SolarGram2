@@ -10,40 +10,30 @@ import SwiftUI
 
 struct MyProfile: View {
     
-    private let threeColumnGrid = [
-        GridItem(.flexible(minimum: 0)),
-        GridItem(.flexible(minimum: 0)),
-        GridItem(.flexible(minimum: 0)),
-    ]
+    let posts = PublicPosts.sampleData.filter { post in
+        post.author.id == PublicPosts.currentUser.id
+    }
+    
+   
     
     var body: some View {
-        VStack (alignment: .center){
-            Image("Rachel")
+        VStack{
+            headerView
+            GridPhotoView(posts: posts)
+        }
+    }
+    
+    var headerView: some View {
+        VStack {
+            Image(PublicPosts.currentUser.photoID)
                 .resizable()
                 .frame(width: 100, height: 100)
                 .cornerRadius(50)
-            
-            Text("Rachel Qian")
+            Text (PublicPosts.currentUser.userName)
                 .font(.title)
-            
-            
-            ScrollView{
-                LazyVGrid (columns: threeColumnGrid, alignment: .center){
-                    ForEach (1..<6) {ix in
-                        Image("rachelpicture\(ix)")
-                            .resizable()
-                            .aspectRatio(contentMode:.fill)
-                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                            .clipped()
-                            .aspectRatio(1, contentMode: .fit)
-                    }
-                }
-            }
-            
-            
-            Spacer()
         }
     }
+    
 }
 
 
