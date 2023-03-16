@@ -10,8 +10,10 @@ import SwiftUI
 
 struct MyProfile: View {
     
-    let posts = PublicPosts.sampleData.filter { post in
-        post.author.id == PublicPosts.currentUser.id
+    @EnvironmentObject var viewModel: PublicPostsViewModel
+    
+    let posts = viewModel.publicPosts.filter { post in
+        post.author.id == viewModel.currentUser.id
     }
     
    
@@ -25,11 +27,11 @@ struct MyProfile: View {
     
     var headerView: some View {
         VStack {
-            Image(PublicPosts.currentUser.photoID)
+            Image(viewModel.currentUser.photoID)
                 .resizable()
                 .frame(width: 100, height: 100)
                 .cornerRadius(50)
-            Text (PublicPosts.currentUser.userName)
+            Text (viewModel.currentUser.userName)
                 .font(.title)
         }
     }
@@ -40,6 +42,7 @@ struct MyProfile: View {
 struct MyProfile_Previews: PreviewProvider {
     static var previews: some View {
         MyProfile()
+            .environmentObject(PublicPostsViewModel())
         
     }
 }

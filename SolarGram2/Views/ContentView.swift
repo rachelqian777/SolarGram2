@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection: Tab = .feed
+    @StateObject var viewModel: PublicPostsViewModel = PublicPostsViewModel()
     
     enum Tab {
             case feed

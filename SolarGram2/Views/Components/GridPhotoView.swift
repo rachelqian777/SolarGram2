@@ -10,6 +10,7 @@ import SwiftUI
 
 struct GridPhotoView: View {
     var posts: [Post]
+    @EnvironmentObject var viewModel: PublicPostsViewModel
     
     var body: some View {
         GeometryReader {geo in
@@ -26,6 +27,7 @@ struct GridPhotoView: View {
 
 struct GridPhotoView_Previews: PreviewProvider {
     static var previews: some View {
-        GridPhotoView(posts: PublicPosts.sampleData)
+        GridPhotoView(posts: viewModel.publicPosts)
+            .environmentObject(PublicPostsViewModel())
     }
 }

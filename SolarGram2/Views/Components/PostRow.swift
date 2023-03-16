@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 struct PostRow: View {
-    @Binding var post: Post
+    var post: Post
+    @EnvironmentObject var viewModel: PublicPostsViewModel
     
     var body : some View {
         VStack(alignment: .leading) {
@@ -52,7 +53,7 @@ struct PostRow: View {
     var likeButton: some View {
         HStack {
             Button {
-                post.isFavorite.toggle()
+                viewModel.setPostFavorite(post: post)
             } label: {
                 if post.isFavorite {
                     Image(systemName: "heart.fill")
@@ -69,6 +70,7 @@ struct PostRow: View {
 
 struct PostRow_Previews: PreviewProvider {
     static var previews: some View {
-        PostRow(post: .constant(PublicPosts.sampleData[0]))
+        PostRow(post: .constant(viewModel.publicPosts[0]))
+            .environmentObject(PublicPostsViewModel())
     }
 }

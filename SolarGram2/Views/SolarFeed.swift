@@ -20,10 +20,10 @@ struct SolarFeed: View {
 //        }
 //    }
     
-    @State var feed: [Post] = PublicPosts.sampleData
+    @EnvironmentObject var viewModel: PublicPostsViewModel
     
     var body: some View {
-        List($feed) {post in
+        List(viewModel.publicPosts) {post in
             PostRow(post: post)
                 .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
         }
@@ -35,6 +35,7 @@ struct SolarFeed: View {
 struct SolarFeed_Previews: PreviewProvider {
     static var previews: some View {
         SolarFeed()
+            .environmentObject(PublicPostsViewModel())
     }
 }
 
