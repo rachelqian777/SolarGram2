@@ -20,8 +20,14 @@ class PublicPostsViewModel: ObservableObject {
         model.toggleFavorite(post)
     }
     
-    var currentUser: User {
-        model.currentUser
+//    var currentUser: User {
+//        PublicPostsViewModel.currentUser
+//    }
+//
+    var currentUserPosts: [Post] {
+        return model.sampleData.filter { post in
+            post.author.id == PublicPostsManager.currentUser.id
+        }
     }
     
 }

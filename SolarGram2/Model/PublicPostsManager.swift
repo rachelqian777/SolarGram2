@@ -9,7 +9,7 @@ import Foundation
 
 struct PublicPostsManager {
     
-    let currentUser: User = User(userName: "Rachel Qian", photoID: "Rachel")
+    static let currentUser: User = User(userName: "Rachel Qian", photoID: "Rachel")
     
     var sampleData : [Post] = [
         Post(photoID: "picture1", description: "Travel memories...", author: PublicPostsManager.currentUser),
@@ -17,7 +17,8 @@ struct PublicPostsManager {
         Post(photoID: "picture3", description: "Another creation", author: PublicPostsManager.currentUser),
         Post(photoID: "picture4", description: "Another great creation", author: PublicPostsManager.currentUser),
         Post(photoID: "picture5", description: "Another great creation", author: PublicPostsManager.currentUser),
-        Post(photoID: "picture6", description: "Another great creation of Iris", author: User(userName: "Iris K.", photoID: "Iris"))
+        Post(photoID: "picture6", description: "Another great creation of Iris", author: User(userName: "Iris K.", photoID: "Iris")),
+        Post(photoID: "picture7", description: "Travel memories...", author: PublicPostsManager.currentUser)
     ]
     
     mutating func toggleFavorite(_ post: Post) {

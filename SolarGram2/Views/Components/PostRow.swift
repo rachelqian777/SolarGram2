@@ -70,7 +70,7 @@ struct PostRow: View {
 
 struct PostRow_Previews: PreviewProvider {
     static var previews: some View {
-        PostRow(post: .constant(viewModel.publicPosts[0]))
+        PostRow(post: PublicPostsViewModel().publicPosts[0])
             .environmentObject(PublicPostsViewModel())
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection: Tab = .feed
-    @StateObject var viewModel: PublicPostsViewModel = PublicPostsViewModel()
+    @EnvironmentObject var viewModel: PublicPostsViewModel
     
     enum Tab {
             case feed
@@ -37,5 +37,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(PublicPostsViewModel())
     }
 }

@@ -27,7 +27,7 @@ struct GridPhotoView: View {
 
 struct GridPhotoView_Previews: PreviewProvider {
     static var previews: some View {
-        GridPhotoView(posts: viewModel.publicPosts)
+        GridPhotoView(posts: PublicPostsViewModel().publicPosts)
             .environmentObject(PublicPostsViewModel())
     }
 }

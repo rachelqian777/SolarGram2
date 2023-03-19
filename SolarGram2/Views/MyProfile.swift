@@ -12,26 +12,26 @@ struct MyProfile: View {
     
     @EnvironmentObject var viewModel: PublicPostsViewModel
     
-    let posts = viewModel.publicPosts.filter { post in
-        post.author.id == viewModel.currentUser.id
-    }
+//    let posts = viewModel.publicPosts.filter { post in
+//        post.author.id == viewModel.currentUser.id
+//    }
     
    
     
     var body: some View {
         VStack{
             headerView
-            GridPhotoView(posts: posts)
+            GridPhotoView(posts: viewModel.currentUserPosts)
         }
     }
     
     var headerView: some View {
         VStack {
-            Image(viewModel.currentUser.photoID)
+            Image(PublicPostsManager.currentUser.photoID)
                 .resizable()
                 .frame(width: 100, height: 100)
                 .cornerRadius(50)
-            Text (viewModel.currentUser.userName)
+            Text (PublicPostsManager.currentUser.userName)
                 .font(.title)
         }
     }
