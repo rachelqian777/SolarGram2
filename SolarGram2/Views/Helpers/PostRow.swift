@@ -15,7 +15,7 @@ struct PostRow: View {
     var body : some View {
         VStack(alignment: .leading) {
             postHeader
-            SquarePicture(Image(post.photoID))
+            SquarePicture(post.image)
             postDetails
             likeButton
         }

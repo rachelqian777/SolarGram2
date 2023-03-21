@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29445AEC29CA140500E2C268 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29445AEB29CA140500E2C268 /* CameraPicker.swift */; };
+		29445AEE29CA142300E2C268 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29445AED29CA142300E2C268 /* ImagePicker.swift */; };
 		297263C329BE68A6000E1CAC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297263C229BE68A6000E1CAC /* Post.swift */; };
 		297263C629BE6B54000E1CAC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297263C529BE6B54000E1CAC /* User.swift */; };
 		297263C829BE6BCF000E1CAC /* PublicPostsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297263C729BE6BCF000E1CAC /* PublicPostsManager.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29445AEB29CA140500E2C268 /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
+		29445AED29CA142300E2C268 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		297263C229BE68A6000E1CAC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		297263C529BE6B54000E1CAC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		297263C729BE6BCF000E1CAC /* PublicPostsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicPostsManager.swift; sourceTree = "<group>"; };
@@ -107,14 +111,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2993936029B3F23C002FF201 /* Components */ = {
+		2993936029B3F23C002FF201 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				297263CB29BE6F44000E1CAC /* SquarePicture.swift */,
 				297263C929BE6D80000E1CAC /* PostRow.swift */,
 				297263CD29BE730F000E1CAC /* GridPhotoView.swift */,
+				29445AEB29CA140500E2C268 /* CameraPicker.swift */,
+				29445AED29CA142300E2C268 /* ImagePicker.swift */,
 			);
-			path = Components;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		2993936129B3F24A002FF201 /* Views */ = {
@@ -123,7 +129,7 @@
 				2993934B29B3F1CD002FF201 /* ContentView.swift */,
 				2993935829B3F1EF002FF201 /* SolarFeed.swift */,
 				2993935A29B3F204002FF201 /* MyProfile.swift */,
-				2993936029B3F23C002FF201 /* Components */,
+				2993936029B3F23C002FF201 /* Helpers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,10 +204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29445AEE29CA142300E2C268 /* ImagePicker.swift in Sources */,
 				297263C829BE6BCF000E1CAC /* PublicPostsManager.swift in Sources */,
 				2993934C29B3F1CD002FF201 /* ContentView.swift in Sources */,
 				297263CA29BE6D80000E1CAC /* PostRow.swift in Sources */,
 				2993935B29B3F204002FF201 /* MyProfile.swift in Sources */,
+				29445AEC29CA140500E2C268 /* CameraPicker.swift in Sources */,
 				2981FC2C29C16BE900ED4670 /* PublicPostsViewModel.swift in Sources */,
 				2993935929B3F1EF002FF201 /* SolarFeed.swift in Sources */,
 				297263CE29BE730F000E1CAC /* GridPhotoView.swift in Sources */,

@@ -17,7 +17,7 @@ struct GridPhotoView: View {
             ScrollView {
                 LazyVGrid (columns: [GridItem(.adaptive(minimum:geo.size.width/4))]) {
                     ForEach(posts) {post in
-                        SquarePicture(Image(post.photoID))
+                        SquarePicture(post.image)
                     }
                 }
             }

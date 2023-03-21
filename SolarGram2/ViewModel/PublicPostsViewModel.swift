@@ -30,4 +30,19 @@ class PublicPostsViewModel: ObservableObject {
         }
     }
     
+    func addPostFrom(image: UIImage?) {
+
+        // make sure the optional is an actual image
+        guard let image else {return}
+        
+        // you must do this on main thread for UI to update properly
+        DispatchQueue.main.async {
+            // create a new post object, it might look like this, but you can adapt as needed in your project.
+            let newPost = Post(image: Image(uiImage: image), description: "Something New", isFavorite: false, author: PublicPostsManager.currentUser)
+
+            // call some function on the model to add the new post to the array of posts, you can do this how you like, but the logic should be in the model
+            self.model.add(newPost)
+        }
+    }
+    
 }
