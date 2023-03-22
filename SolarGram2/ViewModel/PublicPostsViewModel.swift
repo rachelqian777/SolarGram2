@@ -45,4 +45,8 @@ class PublicPostsViewModel: ObservableObject {
         }
     }
     
+    func deletePost (post: Post) {
+        model.delete(post)
+    }
+    
 }

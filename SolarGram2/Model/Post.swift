@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Post: Identifiable {
+struct Post: Identifiable, Equatable {
     let id: UUID = UUID()
     let image: Image
     let description: String

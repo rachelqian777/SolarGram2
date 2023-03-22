@@ -17,7 +17,11 @@ struct PostRow: View {
             postHeader
             SquarePicture(post.image)
             postDetails
-            likeButton
+            HStack {
+                likeButton
+                Spacer()
+                deleteButton
+            }
         }
     }
     
@@ -63,6 +67,17 @@ struct PostRow: View {
             }
         }
         .padding(.leading, 16)
+    }
+    
+    var deleteButton: some View {
+        HStack {
+            Button {
+                //a function that remove the specific post from the sampleDatat array
+            } label: {
+                Image(systemName: "trash")
+            }
+        }
+        .padding(.trailing, 16)
     }
     
 

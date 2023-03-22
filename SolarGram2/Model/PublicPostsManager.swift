@@ -35,5 +35,12 @@ struct PublicPostsManager {
     mutating func add(_ post: Post) {
         sampleData.append(post)
     }
+    
+    //Need a function that removes a specific post from the sampleData array
+    mutating func delete(_ post: Post) {
+        if let index = sampleData.firstIndex(of: post){
+            sampleData.remove(at: index)
+        }
+    }
+    
 }
-
