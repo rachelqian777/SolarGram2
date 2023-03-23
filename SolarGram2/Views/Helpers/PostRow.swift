@@ -12,16 +12,16 @@ struct PostRow: View {
     var post: Post
     @EnvironmentObject var viewModel: PublicPostsViewModel
     
+    //    let myPosts = viewModel.publicPosts.filter { post in
+    //        post.author.id == viewModel.currentUser.id
+    //    }
+    
     var body : some View {
         VStack(alignment: .leading) {
             postHeader
             SquarePicture(post.image)
             postDetails
-            HStack {
-                likeButton
-                Spacer()
-                deleteButton
-            }
+            likeButton
         }
     }
     
@@ -38,6 +38,10 @@ struct PostRow: View {
                     .fontWeight(.bold)
             }
             Spacer()
+            
+            if post.author == PublicPostsManager.currentUser {
+                deleteButton
+            }
         }
         .padding(.vertical, 4)
         .padding(.horizontal, 8)
@@ -73,11 +77,12 @@ struct PostRow: View {
         HStack {
             Button {
                 //a function that remove the specific post from the sampleDatat array
+                viewModel.deletePost(post: post)
             } label: {
-                Image(systemName: "trash")
+                Text("delete")
             }
         }
-        .padding(.trailing, 16)
+        .padding(.leading, 16)
     }
     
 

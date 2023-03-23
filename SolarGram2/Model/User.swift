@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct User: Identifiable {
+struct User: Identifiable, Equatable {
     let id: UUID = UUID()
     let userName: String
     let photoID: String
+    
+    static func == (lhs: User, rhs: User) -> Bool {
+            lhs.id == rhs.id
+        }
 }

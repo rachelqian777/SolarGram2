@@ -8,10 +8,13 @@
 import Foundation
 import SwiftUI
 
-struct Post: Identifiable, Equatable {
+struct Post: Identifiable {
     let id: UUID = UUID()
     let image: Image
     let description: String
     var isFavorite: Bool = false
     let author: User
+    
+
+    
 }

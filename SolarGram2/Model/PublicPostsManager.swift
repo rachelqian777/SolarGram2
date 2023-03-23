@@ -36,11 +36,13 @@ struct PublicPostsManager {
         sampleData.append(post)
     }
     
-    //Need a function that removes a specific post from the sampleData array
+    //    Need a function that removes a specific post from the sampleData array
     mutating func delete(_ post: Post) {
-        if let index = sampleData.firstIndex(of: post){
-            sampleData.remove(at: index)
+        let postIndex = sampleData.firstIndex { p in
+            p.id == post.id
         }
+        guard let actualIndex = postIndex else { return }
+        sampleData.remove(at: actualIndex)
+        
     }
-    
 }
