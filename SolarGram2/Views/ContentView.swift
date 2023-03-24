@@ -71,9 +71,10 @@ struct ContentView: View {
                             shouldShowCamera.toggle()
                             return
                         }
-                        
+
                         if num == 2 {
                             shouldShowRoll.toggle()
+                            return
                         }
                         
                         selectedIndex = num
